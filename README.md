@@ -15,7 +15,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Create Blog posts from Netlify CMS
 - Tags: Separate page for posts under each tag
 - Basic directory organization
-- Uses Bulma for styling, but size is reduced by `purge-css-plugin`
+- Uses Bootstrap for styling, but size is reduced by `purge-css-plugin`
 - Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 - Uses `gatsby-image` with Netlify-CMS preview support
 - Separate components for everything
@@ -118,7 +118,7 @@ MacOS users might also encounter some errors, for more info check [node-gyp](htt
 
 ## Purgecss
 
-This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) and [bulma](https://bulma.io/). The bulma builds are usually ~170K but reduced 90% by purgecss.
+This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/)
 
 # CONTRIBUTING
 
