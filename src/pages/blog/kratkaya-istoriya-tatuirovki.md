@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+slug: kratkaya-istoriya-tatuirovki
 title: Краткая история татуировки
 date: 2017-01-04T15:04:10.000Z
 description: Татуировка появилась где-то и когда-то много-много лет назад,
