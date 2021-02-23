@@ -70,6 +70,10 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
+            <meta
+                name="keywords"
+                content={`${post.frontmatter.keywords}`}
+            />
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -96,6 +100,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        keywords
         tags
       }
     }
