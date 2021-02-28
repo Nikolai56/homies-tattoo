@@ -29,6 +29,13 @@ module.exports = {
         name: 'images',
       },
     },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    `gatsby-plugin-mdx`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
