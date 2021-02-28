@@ -16,22 +16,22 @@ i18n:
 
 collections:
   - name: posts
-      label: Posts
-      folder: src/pages/posts
-      create: true
-      i18n: true
-      fields:
-        - label: Title
-          name: title
-          widget: string
-          i18n: true
-        - label: Date
-          name: date
-          widget: datetime
-          i18n: duplicate
-        - label: Body
-          name: body
-          widget: markdown
+    label: Posts
+    folder: src/pages/posts
+    create: true
+    i18n: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        i18n: true
+      - label: Date
+        name: date
+        widget: datetime
+        i18n: duplicate
+      - label: Body
+        name: body
+        widget: markdown
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
