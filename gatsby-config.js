@@ -35,12 +35,12 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    `gatsby-plugin-mdx`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
+        extensions: [`.md`, `.mdx`],
         plugins: [
           {
             resolve: 'gatsby-remark-relative-images',

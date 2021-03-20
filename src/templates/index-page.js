@@ -127,7 +127,7 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.mdx
 
   return (
     <Layout>
@@ -146,7 +146,7 @@ const IndexPage = ({ data }) => {
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
+    mdx: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
   }),
@@ -156,7 +156,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
         image {

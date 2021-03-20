@@ -129,7 +129,7 @@ ProductPageTemplate.propTypes = {
 }
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.mdx
 
   return (
     <Layout>
@@ -150,7 +150,7 @@ const ProductPage = ({ data }) => {
 
 ProductPage.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
+    mdx: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
   }),
@@ -160,7 +160,7 @@ export default ProductPage
 
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    mdx(id: { eq: $id }) {
       frontmatter {
         title
         image {
