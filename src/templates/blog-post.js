@@ -13,7 +13,7 @@ export const BlogPostTemplate = ({
 }) => {
 
   return (
-    <section className="section articlePage">
+    <section className="section">
       {helmet || ''}
       <div className="container content">
         <div className="columns">
@@ -56,6 +56,7 @@ const BlogPost = ({ data }) => {
                 name="keywords"
                 content={`${post.frontmatter.keywords}`}
             />
+            <body className="articlePage"/>
           </Helmet>
         }
         title={post.frontmatter.title}

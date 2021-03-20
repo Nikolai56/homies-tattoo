@@ -23,7 +23,7 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: 'active',
             })
           : this.setState({
               navBarActiveClass: '',
@@ -33,6 +33,31 @@ const Navbar = class extends React.Component {
   }
 
   render() {
+    return (
+      <nav className="navbar fixed-top navbar-dark navbar-expand-lg">
+        <div className="container">
+          <Link to="/" className="navbar-brand">
+            <img className="logo" src="/img/homiesLogo-sm.png" alt="Homies Tattoo"/>
+          </Link>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse justify-content-center lead" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item"><Link className="nav-link smooth-scroll" to="/">Главная</Link></li>
+              <li className="nav-item"><Link className="nav-link smooth-scroll" to="/about-us">О нас</Link></li>
+              <li className="nav-item"><a className="nav-link smooth-scroll" href="portfolio.html">Портфолио</a></li>
+              <li className="nav-item active"><a className="nav-link smooth-scroll" href="blog/">Блог</a></li>
+              <li className="nav-item"><a className="nav-link smooth-scroll" href="obuchenie.html">Обучение</a></li>
+              <li className="nav-item"><a className="nav-link smooth-scroll" href="faq.html">FAQ</a></li>
+              <li className="nav-item last"><a className="nav-link smooth-scroll" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    )
     return (
       <nav
         className="navbar is-transparent"
