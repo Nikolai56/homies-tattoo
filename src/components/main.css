@@ -1,0 +1,432 @@
+body {
+    /*padding-top: 3rem;*/
+    color: #5a5a5a;
+}
+.theme-dark {
+    background-color: #8a8a8a;
+    color: #dcdcdc;
+}
+.theme-dark footer {
+    background-color: #525252;
+}
+.theme-dark .cloud:after {
+    border-color: #8a8a8a transparent transparent #8a8a8a;
+}
+.theme-dark .cloud2:after {
+    border-color: #8a8a8a #8a8a8a transparent transparent;
+}
+.theme-dark a {
+    color: #a9d2ff;
+}
+.theme-dark a:hover {
+    color: #fff;
+}
+.theme-dark.textPage h1 {
+    color: #5a5a5a;
+}
+.theme-dark .text-muted {
+    color: #455461!important;
+}
+.theme-dark .nav-tabs a {
+    color: #a9d2ff;
+}
+.theme-dark .breadcrumb {
+    background-color: #525252;
+}
+footer {
+    padding: 2.5rem 0;
+    color: #999;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+    margin-top: 3rem;
+}
+.relative {
+    position: relative;
+}
+.bg-dark {
+    background-color: #000 !important;
+}
+.mainPaige {
+    padding-top: 0;
+}
+#navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+.logo {
+    border-radius: 0 !important;
+}
+.first-screen {
+    /*background: url(/img/eskiz/05.jpg) center #343a40 fixed;*/
+    background: url(/img/main.jpg) center #343a40 fixed;
+    /*background-color: #343a40;*/
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.dark-gradient {
+    background: radial-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1));
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.dark-gradient-reverse {
+    background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+/*.first-screen img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}*/
+
+.arrow {
+    color: #fff;
+    font-size: 3em;
+    white-space: nowrap;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 750ms ease-in-out;
+    -ms-transition: all 750ms ease-in-out;
+    -o-transition: all 750ms ease-in-out;
+    transition: all 750ms ease-in-out;
+}
+
+.lift {
+    bottom: 64px;
+}
+
+.navbar.fixed-top {
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 750ms ease-in-out;
+    -ms-transition: all 750ms ease-in-out;
+    -o-transition: all 750ms ease-in-out;
+    transition: all 750ms ease-in-out;
+}
+
+.nav-item.active a {
+    text-shadow: 0px 0px 20px #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.75);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    text-shadow: 0px 0px 20px #fff;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    background-color: rgba(115, 154, 187, 0.3);
+    color: #000;
+}
+
+.nav-tabs a {
+    color: #739abb;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-color: #739abb #739abb transparent;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: #739abb;
+    color: #fff;
+}
+
+.workCard {
+    background-color: #ccc;
+    border: 8px solid #fff;
+    border-bottom-width: 24px;
+    margin-bottom: 30px;
+    transition: .2s ease-in all;
+    height: 200px;
+    position: relative;
+}
+
+.workCard .colorBg {
+    transition: .2s ease-in all;
+    transform: rotateY(180deg);
+}
+
+.workCard:hover .colorBg {
+    opacity: 0;
+    transform: rotateY(0);
+}
+
+.workCard > div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.workCard .hasBg {
+    transition: .2s ease-in all;
+    transform: rotateY(180deg);
+    height: 100%;
+}
+
+.workCard:hover .hasBg {
+    transform: rotateY(0);
+}
+
+.workCard:hover {
+    box-shadow: 0px 10px 57px 0px rgba(0, 0, 0, 0.3);
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+}
+
+.workCard01 {
+    cursor: alias;
+}
+
+.workCard01 .hasBg {
+    background: url('/img/workCard01.jpg');
+}
+
+.workCard02 {
+    cursor: progress;
+}
+
+.workCard03 {
+    cursor: wait;
+}
+
+.workCard04 {
+    cursor: alias;
+}
+
+.divider {
+    margin: 5rem 0;
+}
+
+.textPage h1 {
+    background-color: rgba(204, 204, 204, 0.9);
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0px 10px 57px 0px rgba(0, 0, 0, 0.3);
+}
+
+.aboutBg {
+    background: url(/img/aboutBg.jpg) center #fff fixed;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.leoBg {
+    background: url(/img/leo.jpg) center #fff fixed;
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.deerBg {
+    background: url(/img/deer.jpg) center #fff fixed;
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.schoolBg {
+    background: url(/img/schoolLogo.jpg) center #000 fixed;
+    height: 75vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.articlePage {
+    padding-top: 3rem;
+}
+.articlePage .navbar-dark {
+    background-color: #000;
+}
+
+.articlePage img {
+    border-radius: 16px;
+}
+
+.articlePage h1, .articlePage h2 {
+    text-align: center;
+}
+
+.textPage img {
+    border-radius: 16px;
+}
+
+.work {
+    text-align: center;
+}
+
+.work img {
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.video {
+    background-color: #000;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.btn {
+    transition: .2s ease-in all;
+}
+
+.btn:hover {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*Стили для magnific popup*/
+.image-source-link {
+    color: #98C3D1;
+}
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+/*++===++*/
+
+.breadcrumb li+li {
+    margin-left: 0.4rem;
+}
+.topbg {
+    background: url(/img/ornament.png) center rgba(0, 0, 0, 0.5);
+    background-repeat: repeat-x;
+    height: 161px;
+    width: 100%;
+}
+/*.cloud {
+	border:2px solid #fff;
+	border-radius:10px;
+	height:50px;
+	width:500px;
+	padding:20px;
+	position:relative;
+}
+.cloud:before {
+	border:50px solid transparent;
+	border-bottom-color:white;
+	position:absolute;
+	bottom:100%;
+	right:40px;
+	content:'';
+}
+.cloud:after {
+	border:48px solid transparent;
+	border-bottom-color:#191919;
+	position:absolute;
+	bottom:100%;
+	right:42px;
+	content:'';
+}*/
+.cloud {
+    position: relative;
+    border: 8px solid #666;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 2px 2px 4px #888;
+    -moz-box-shadow: 2px 2px 4px #888;
+    box-shadow: 2px 2px 4px #888;
+    padding: 16px;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.cloud:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    bottom: -50px;
+    border: 25px solid;
+    border-color: #666 transparent transparent #666;
+}
+.cloud:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+    bottom: -30px;
+    border: 15px solid;
+    border-color: #fff transparent transparent #fff;
+}
+.cloud2 {
+    position: relative;
+    border: 8px solid #666;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 2px 2px 4px #888;
+    -moz-box-shadow: 2px 2px 4px #888;
+    box-shadow: 2px 2px 4px #888;
+    padding: 16px;
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.cloud2:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 30px;
+    bottom: -50px;
+    border: 25px solid;
+    border-color: #666 #666 transparent transparent;
+}
+.cloud2:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 38px;
+    bottom: -30px;
+    border: 15px solid;
+    border-color: #fff #fff transparent transparent;
+}

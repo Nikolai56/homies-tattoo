@@ -13,7 +13,7 @@ export const BlogPostTemplate = ({
 }) => {
 
   return (
-    <section className="section">
+    <section className="section articlePage">
       {helmet || ''}
       <div className="container content">
         <div className="columns">
