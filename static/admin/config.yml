@@ -10,29 +10,22 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-i18n:
-  structure: multiple_folders
-  locales: [en, de, fr]
 
 collections:
   - name: posts
     label: Posts
     folder: src/pages/posts
     create: true
-    i18n: true
     fields:
       - label: Title
         name: title
         widget: string
-        i18n: true
       - label: Date
         name: date
         widget: datetime
-        i18n: duplicate
       - label: Body
         name: body
         widget: markdown
-        i18n: true
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
@@ -47,13 +40,9 @@ collections:
       - {label: "Keywords", name: "keywords", widget: "text"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "pages"
     label: "Pages"
-    i18n:
-      structure: single_file
-      locales: [ en, de, fr ]
     files:
       - file: "src/pages/index.md"
         label: "Landing Page"
@@ -71,10 +60,9 @@ collections:
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
-        i18n: true
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/products/index.md"
         label: "Products Page"
