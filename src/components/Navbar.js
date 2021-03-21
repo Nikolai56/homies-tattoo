@@ -47,12 +47,12 @@ const Navbar = class extends React.Component {
             <ul className="navbar-nav">
               <li className="nav-item"><Link className="nav-link smooth-scroll" to="/">Главная</Link></li>
               <li className="nav-item"><Link className="nav-link smooth-scroll" to="/about-us">О нас</Link></li>
-              <li className="nav-item"><a className="nav-link smooth-scroll" href="portfolio.html">Портфолио</a></li>
-              <li className="nav-item active"><a className="nav-link smooth-scroll" href="blog/">Блог</a></li>
-              <li className="nav-item"><a className="nav-link smooth-scroll" href="obuchenie.html">Обучение</a></li>
-              <li className="nav-item"><a className="nav-link smooth-scroll" href="faq.html">FAQ</a></li>
-              <li className="nav-item last"><a className="nav-link smooth-scroll" href="contacts.html">Контакты</a>
-              </li>
+              {/*<li className="nav-item"><a className="nav-link smooth-scroll" href="portfolio.html">Портфолио</a></li>*/}
+              {/*<li className="nav-item active"><a className="nav-link smooth-scroll" href="blog/">Блог</a></li>*/}
+              {/*<li className="nav-item"><a className="nav-link smooth-scroll" href="obuchenie.html">Обучение</a></li>*/}
+              {/*<li className="nav-item"><a className="nav-link smooth-scroll" href="faq.html">FAQ</a></li>*/}
+              {/*<li className="nav-item last"><a className="nav-link smooth-scroll" href="contacts.html">Контакты</a>*/}
+              {/*</li>*/}
             </ul>
           </div>
         </div>

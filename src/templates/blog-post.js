@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/Layout'
 
 export const BlogPostTemplate = ({
@@ -73,7 +73,7 @@ BlogPost.propTypes = {
 
 export default BlogPost
 
-export const pageQuery = graphql`
+export const blogPostByIDQuery = graphql`
   query BlogPostByID($id: String!) {
     mdx(id: { eq: $id }) {
       id

@@ -16,7 +16,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Basic directory organization
 - Uses Bootstrap for styling, but size is reduced by `purge-css-plugin`
 - Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
-- Uses `gatsby-image` with Netlify-CMS preview support
+- Uses `gatsby-plugin-image` with Netlify-CMS preview support
 - Separate components for everything
 - Netlify deploy configuration
 - Netlify function support, see `lambda` folder
