@@ -5,9 +5,14 @@ import Navbar from '../components/Navbar'
 import './all.scss'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, pageContext, crumbLabel, disableLinks }) => {
   const { title, description } = useSiteMetadata()
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext
+
   return (
     <div>
       <Helmet>
@@ -49,7 +54,10 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <main className="container mt-5">
+        <Breadcrumb crumbs={crumbs} location={location} crumbLabel={crumbLabel} disableLinks={disableLinks}/>
+        {children}
+      </main>
       <Footer />
     </div>
   )

@@ -10,6 +10,7 @@
     "bootswatch": "^4.5.3",
     "bulma": "^0.9.1",
     "gatsby": "^3.1.1",
+    "gatsby-plugin-breadcrumb": "^12.1.1",
     "gatsby-plugin-image": "^1.1.1",
     "gatsby-plugin-mdx": "^2.1.0",
     "gatsby-plugin-netlify": "^3.1.0",
