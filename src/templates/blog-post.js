@@ -5,46 +5,28 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/Layout'
 
-export const BlogPostTemplate = ({
-  content,
-  description,
-  title,
-  helmet,
-}) => {
-
+export const BlogPostTemplate = ({ content, title, helmet }) => {
   return (
-    <section className="section">
+    <article className="d-flex flex-column align-items-center">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <MDXRenderer>{content}</MDXRenderer>
-          </div>
-        </div>
-      </div>
-    </section>
+      <h1 className="mt-4 mb-4">{title}</h1>
+      <MDXRenderer>{content}</MDXRenderer>
+    </article>
   )
 }
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
 
 const BlogPost = ({ data }) => {
   const { mdx: post } = data
-
   return (
     <Layout>
       <BlogPostTemplate
         content={post.body}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -52,11 +34,8 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
-            <meta
-                name="keywords"
-                content={`${post.frontmatter.keywords}`}
-            />
-            <body className="articlePage"/>
+            <meta name="keywords" content={`${post.frontmatter.keywords}`} />
+            <body className="articlePage" />
           </Helmet>
         }
         title={post.frontmatter.title}
@@ -81,7 +60,6 @@ export const blogPostByIDQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         keywords
       }
     }

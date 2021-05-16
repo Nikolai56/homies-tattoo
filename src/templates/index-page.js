@@ -20,7 +20,9 @@ export const IndexPageTemplate = ({
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.gatsbyImageData.src : image
+          !!image.childImageSharp
+            ? image.childImageSharp.gatsbyImageData.src
+            : image
         })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
@@ -154,35 +156,36 @@ IndexPage.propTypes = {
 
 export default IndexPage
 
-export const pageQuery = graphql`query IndexPageTemplate {
-  mdx(frontmatter: {templateKey: {eq: "index-page"}}) {
-    frontmatter {
-      title
-      image {
-        childImageSharp {
-          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-        }
-      }
-      heading
-      subheading
-      mainpitch {
+export const pageQuery = graphql`
+  query IndexPageTemplate {
+    mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
         title
-        description
-      }
-      description
-      intro {
-        blurbs {
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-            }
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
-          text
         }
         heading
+        subheading
+        mainpitch {
+          title
+          description
+        }
         description
+        intro {
+          blurbs {
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+              }
+            }
+            text
+          }
+          heading
+          description
+        }
       }
     }
   }
-}
 `

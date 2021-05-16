@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/Layout'
 
 export const AboutPageTemplate = ({ title, content }) => {
-
   return (
     <section className="section section--gradient">
       <div className="container">
@@ -35,10 +34,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <AboutPageTemplate
-        title={post.frontmatter.title}
-        content={post.body}
-      />
+      <AboutPageTemplate title={post.frontmatter.title} content={post.body} />
     </Layout>
   )
 }

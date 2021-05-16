@@ -23,7 +23,9 @@ export const ProductPageTemplate = ({
       className="full-width-image-container margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.gatsbyImageData.src : image
+          !!image.childImageSharp
+            ? image.childImageSharp.gatsbyImageData.src
+            : image
         })`,
       }}
     >
@@ -158,77 +160,78 @@ ProductPage.propTypes = {
 
 export default ProductPage
 
-export const productPageQuery = graphql`query ProductPage($id: String!) {
-  mdx(id: {eq: $id}) {
-    frontmatter {
-      title
-      image {
-        childImageSharp {
-          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-        }
-      }
-      heading
-      description
-      intro {
-        blurbs {
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-            }
+export const productPageQuery = graphql`
+  query ProductPage($id: String!) {
+    mdx(id: { eq: $id }) {
+      frontmatter {
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
-          text
         }
         heading
         description
-      }
-      main {
-        heading
-        description
-        image1 {
-          alt
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
+        intro {
+          blurbs {
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+              }
             }
+            text
           }
-        }
-        image2 {
-          alt
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
-            }
-          }
-        }
-        image3 {
-          alt
-          image {
-            childImageSharp {
-              gatsbyImageData(quality: 72, layout: FULL_WIDTH)
-            }
-          }
-        }
-      }
-      testimonials {
-        author
-        quote
-      }
-      full_image {
-        childImageSharp {
-          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-        }
-      }
-      pricing {
-        heading
-        description
-        plans {
+          heading
           description
-          items
-          plan
-          price
+        }
+        main {
+          heading
+          description
+          image1 {
+            alt
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
+              }
+            }
+          }
+          image2 {
+            alt
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 526, quality: 92, layout: CONSTRAINED)
+              }
+            }
+          }
+          image3 {
+            alt
+            image {
+              childImageSharp {
+                gatsbyImageData(quality: 72, layout: FULL_WIDTH)
+              }
+            }
+          }
+        }
+        testimonials {
+          author
+          quote
+        }
+        full_image {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+        pricing {
+          heading
+          description
+          plans {
+            description
+            items
+            plan
+            price
+          }
         }
       }
     }
   }
-}
 `

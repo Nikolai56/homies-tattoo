@@ -8,10 +8,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMdx(
-        sort: { fields: [frontmatter___date], order: ASC }
-        limit: 1000
-      ) {
+      allMdx(sort: { fields: [frontmatter___date], order: ASC }, limit: 1000) {
         nodes {
           id
           fields {
@@ -43,12 +40,11 @@ exports.createPages = ({ actions, graphql }) => {
             id,
           },
         })
-      }
-      else {
+      } else {
         createPage({
           path: post.fields.slug,
           component: path.resolve(
-              `./src/templates/${String(post.frontmatter.templateKey)}.js`
+            `./src/templates/${String(post.frontmatter.templateKey)}.js`
           ),
           // additional data can be passed via context
           context: {
